@@ -794,7 +794,7 @@ class PostProcessor(object):
         # find the destination folder
         try:
             proper_path = ep_obj.proper_path()
-            proper_absolute_path = ek.ek(os.path.join, ep_obj.show.location, proper_path)
+            proper_absolute_path = ek.ek(os.path.join, sickbeard.TV_DOWNLOAD_DIR, proper_path)
             dest_path = ek.ek(os.path.dirname, proper_absolute_path)
 
         except exceptions.ShowDirNotFoundException:
